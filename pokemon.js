@@ -46,3 +46,10 @@ class Pokemon {
 
 
 module.exports = Pokemon
+
+console.log(JSON.stringify([
+    { "name": "Thunder Shock", "_damage": 58, "pokemon" : "Pikachu", "_ownerName" : "Ash" },
+    { "name": "Thunderbolt", "_damage": 72, "pokemon" : "Pikachu", "_ownerName" : "Ash" },
+    { "name": "Whirlpool", "_damage": 60, "pokemon" : "Mudkip", "_ownerName" : "Ash" },
+    { "name": "Leaf Tornado", "_damage": 90, "pokemon" : "Celebi", "_ownerName" : "Ash" }
+  ], null, 2))

@@ -5,7 +5,7 @@ class Trainer {
     constructor(name, gender) {
         this.name = name
         this.gender = gender
-        this.pokemons = this.getPokemons()
+        this.pokemons = []
     }
     getPokemons(){
         let pokemons = []
@@ -29,10 +29,15 @@ class Trainer {
         return this
     }
     healPokemons(num) {
+        let poke = []
         for (let i = 0; i < this.pokemons.length; i++) {
-            console.log(`healing ${this.pokemons[i].name}`)
-            this.pokemons[i].heal(num)
+            this.pokemons[i].heal(100)
+            poke.push({
+                name : this.pokemons[i].name,
+                hp : this.pokemons[i]._hp
+            })
         }
+        console.table(poke)
         return this
     }
     trainPokemon(indexOfPokemon, moveName) {
