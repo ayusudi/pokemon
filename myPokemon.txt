@@ -1,0 +1,3 @@
+Name : Mudkip (Water), Hp : 60
+Name : Celebi (Grass), Hp : 0
+Name : Luxray (Electric), Hp : 90
