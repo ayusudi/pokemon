@@ -14,8 +14,8 @@ Test Case 1 )
 
 ```jsx
 ashTrainer.caughtPokemon(mudkip)
-ashTrainer.caughtPokemon(PokemonFactory('Celebi', 'Grass', 0))
-ashTrainer.save() // saving to listPokemons.txt
+ashTrainer.caughtPokemon(PokemonFactory.create('Celebi', 'Grass', 0))
+ashTrainer.save() // saving to listPokemon.txt
 ```
 
 After running terminal ⤴️ listPokemon.txt update to ⤵️
@@ -28,8 +28,6 @@ Name : Celebi (Grass), Hp : 0
 
 
 
-
-
 ---
 
 ### Case 2 (make listPokemon.txt auto-save)
@@ -38,6 +36,7 @@ Test Case 2
 
 ```jsx
 ashTrainer.pokeCenterHeal()
+ashTrainer.save()
 ```
 
 After running terminal ⤴️ listPokemon.txt update to ⤵️
@@ -59,13 +58,18 @@ Name : Celebi (Grass), Hp : 100
 Test Case 3
 
 ```jsx
-ashTrainer.trainPokemon(2, 'Leaf Tornado' , 90) // auto-save to pokemonMove.json
+ashTrainer.trainPokemon(2, 'Leaf Tornado' , 90) 
+ashTrainer.save()
 ```
 
 After running terminal ⤴️ pokemonMove.json update to ⤵️
 
 ```
-[    { "name": "Thunder Shock", "_damage": 30, "pokemon" : "Pikachu", "_ownerName" : "Ash" },    { "name": "Thunderbolt", "_damage": 22, "pokemon" : "Pikachu", "_ownerName" : "Ash" },    { "name": "Whirlpool", "_damage": 60, "pokemon" : "Mudkip", "_ownerName" : "Ash" },    { "name": "Leaf Tornado", "_damage": 90, "pokemon" : "Celebi", "_ownerName" : "Ash" }]
+[    
+    { "name": "Thunder Shock", "_damage": 30, "pokemon" : "Pikachu", "_ownerName" : "Ash" },    
+    { "name": "Thunderbolt", "_damage": 22, "pokemon" : "Pikachu", "_ownerName" : "Ash" },    
+    { "name": "Whirlpool", "_damage": 60, "pokemon" : "Mudkip", "_ownerName" : "Ash" },    
+    { "name": "Leaf Tornado", "_damage": 90, "pokemon" : "Celebi", "_ownerName" : "Ash" }]
 ```
 
 
