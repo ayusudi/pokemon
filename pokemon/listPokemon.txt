@@ -1,0 +1,3 @@
+Name : Pikachu (Electric), Hp : 100
+Name : Mudkip (Water), Hp : 100
+Name : Celebi (Grass), Hp : 100

@@ -8,8 +8,8 @@ class Move {
         return this._damage
     }
 
-    increaseDamage(number){
-        this._damage += number
+    set damage(num){
+        this._damage = num
     }
 }
 

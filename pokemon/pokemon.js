@@ -3,7 +3,7 @@ const Move = require('./move')
 class Pokemon {
     constructor(name, type, hp, ownerName) {
         this.name = name
-        this._type = type
+        this.type = type
         this._hp = hp || 100
         this._moves = []
         this._ownerName = ownerName || null
@@ -14,22 +14,30 @@ class Pokemon {
     get hp (){
         return this._hp
     }
+
+    get moves(){
+        return this._moves
+    }
+
+    learnMove(moveName, dmg){
+        let instance = new Move(moveName, dmg)
+        this._moves.push(instance)
+        return this
+    }
+
     train(moveName, point) {
-        let move = this._moves.filter(el => el.name == moveName)[0]
+        let move = this._moves.filter(el => el.name === moveName)[0]
         if(move){
-            move.increaseDamage(point)
+            let tenPersen = point / 10
+            let update = move.damage + tenPersen
+            move.damage = update
+            return this
         } else {
-            let instance = new Move(moveName, point)
-            this._moves.push(instance)
+            this.learnMove(moveName, point)
         }
         return this
     }
     heal() {
-        if (this._hp == 100) {
-            console.log(`hp is ${this._hp}, maximum hp 100`)
-        } else {
-            console.log(`hp increase to 100`)
-        }
         this._hp = 100
         return this
     }
@@ -46,10 +54,3 @@ class Pokemon {
 
 
 module.exports = Pokemon
-
-console.log(JSON.stringify([
-    { "name": "Thunder Shock", "_damage": 58, "pokemon" : "Pikachu", "_ownerName" : "Ash" },
-    { "name": "Thunderbolt", "_damage": 72, "pokemon" : "Pikachu", "_ownerName" : "Ash" },
-    { "name": "Whirlpool", "_damage": 60, "pokemon" : "Mudkip", "_ownerName" : "Ash" },
-    { "name": "Leaf Tornado", "_damage": 90, "pokemon" : "Celebi", "_ownerName" : "Ash" }
-  ], null, 2))
