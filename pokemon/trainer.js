@@ -11,7 +11,7 @@ class Trainer {
     }
     caughtPokemon(pokemon) {
         pokemon.ownerName = this.name
-        this._pokemons.push(pokemon)
+        this._pokemons.push(pokemon) // Aggregation
         return this
     }
     pokeCenterHeal() {

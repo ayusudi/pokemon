@@ -33,7 +33,7 @@ Pokemon {
 
 ---
 
-# Agregation
+# Aggregation
 
 Suatu hubungan 2 class yang ada, karena di gabungkan. Namun 2 class tersebut independent! 
 **Example** : Bag - Item, dalam bag terdapat items namun tanpa adanya bag, item tersebut tetap ada.

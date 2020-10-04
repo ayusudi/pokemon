@@ -18,7 +18,7 @@ class Pokemon {
         return this._moves
     }
     learnMove(moveName, dmg) {
-        let instance = new Move(moveName, dmg)
+        let instance = new Move(moveName, dmg) // Composition
         this._moves.push(instance)
         return this
     }

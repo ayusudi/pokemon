@@ -2,7 +2,7 @@ const fs = require('fs')
 const PokemonFactory = require('./factory')
 const Trainer = require('./trainer')
 
-class Game {
+class Game { // example static method
     static arenaBattle(fighter, receiver) {
         let move = fighter.bestMove()
         if (move) {
