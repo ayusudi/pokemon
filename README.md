@@ -1,6 +1,6 @@
 # Pokemon
 
-[pokemoncard](https://cdn.bulbagarden.net/upload/f/f9/PikachuWizardsPromo4.jpg)
+![pokemoncard](https://cdn.bulbagarden.net/upload/f/f9/PikachuWizardsPromo4.jpg)
 
 ## Composition 
 Suatu hubungan 2 class yang menyatakan bagian dari class utama (part of).<br>
@@ -285,4 +285,4 @@ Trainer {
 }
 */
 ```
-[Goodbye](https://3.bp.blogspot.com/-5b_QQCrDwV0/WSYyVxGwflI/AAAAAAAHrVk/tQszPMjDmRsoyIK8Ei98SomPTSxG_4dnQCLcB/s1600/AS002652_03.gif)
+![Goodbye](https://3.bp.blogspot.com/-5b_QQCrDwV0/WSYyVxGwflI/AAAAAAAHrVk/tQszPMjDmRsoyIK8Ei98SomPTSxG_4dnQCLcB/s1600/AS002652_03.gif)
