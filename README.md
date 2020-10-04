@@ -21,13 +21,13 @@ Pokemon {
     name : 'Pikachu',
     type : 'Electric',
     _hp : 100,
-    _ownerName : null,
     _moves : [
-        Move {
-            name : 'Thunderbolt',
+      Move {
+        name : 'Thunderbolt',
             _damage : 20
         }
-    ]
+    ],
+    _ownerName : null
 }*/
 ```
 
@@ -44,6 +44,7 @@ Suatu hubungan 2 class yang ada, karena di gabungkan. Namun 2 class tersebut ind
 ```jsx
 let ashTrainer = new Trainer('Ash', 'Male')
 ashTrainer.caughtPokemon(pikachu)
+console.log(ashTrainer)
 /*
 Trainer {
   name: 'Ash',
@@ -53,8 +54,8 @@ Trainer {
       name: 'Pikachu',
       type: 'Electric',
       _hp: 90,
-      _ownerName: 'Ash',
-      _moves: [Array]
+      _moves: [Array],
+      _ownerName: 'Ash'
     }
   ]
 }
@@ -227,7 +228,7 @@ Name : Celebi (Grass), Hp : 0
 Name : Luxray (Electric), Hp : 90
 ```
 
-try to create Array of Instance from demo.txt dengan factory method
+try to create Array of Instance from demo.txt dengan factory method in file demo.js
 
 ---
 
