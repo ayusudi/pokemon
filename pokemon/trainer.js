@@ -6,7 +6,7 @@ class Trainer {
         this.gender = gender
         this._pokemons = []
     }
-    get pokemons(){
+    get pokemons() {
         return this._pokemons
     }
     caughtPokemon(pokemon) {
@@ -20,8 +20,8 @@ class Trainer {
         for (let i = 0; i < this._pokemons.length; i++) {
             this._pokemons[i].heal()
             poke.push({
-                name : this._pokemons[i].name,
-                hp : this._pokemons[i]._hp
+                name: this._pokemons[i].name,
+                hp: this._pokemons[i]._hp
             })
         }
         console.table(poke)
@@ -31,22 +31,22 @@ class Trainer {
         this._pokemons[indexOfPokemon].train(moveName, damage)
         return this
     }
-    save(){
+    save() {
         let txt = ''
         for (let i = 0; i < this._pokemons.length; i++) {
-            txt += `Name : ${this._pokemons[i].name} (${this._pokemons[i].type}), Hp : ${this._pokemons[i].hp}\n`            
+            txt += `Name : ${this._pokemons[i].name} (${this._pokemons[i].type}), Hp : ${this._pokemons[i].hp}\n`
         }
-        txt = txt.slice(0, txt.length-1)
+        txt = txt.slice(0, txt.length - 1)
         fs.writeFileSync('./listPokemon.txt', txt, 'utf-8')
         let json = []
         for (let i = 0; i < this._pokemons.length; i++) {
             let moves = this._pokemons[i].moves
             for (let j = 0; j < moves.length; j++) {
                 json.push({
-                    name : moves[j].name,
-                    _damage : moves[j].damage,
-                    pokemon : this._pokemons[i].name,
-                    _ownerName : this._pokemons[i]._ownerName
+                    name: moves[j].name,
+                    _damage: moves[j].damage,
+                    pokemon: this._pokemons[i].name,
+                    _ownerName: this._pokemons[i]._ownerName
                 })
             }
         }
@@ -55,6 +55,5 @@ class Trainer {
         return this
     }
 }
-
 
 module.exports = Trainer

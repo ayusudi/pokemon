@@ -80,7 +80,6 @@ console.log(list)
 ]
 */
 
-
 ashTrainer.caughtPokemon(mudkip)
 ashTrainer.caughtPokemon(PokemonFactory.create('Celebi', 'Grass', 0))
 ashTrainer.save() // saving to listPokemons.txt

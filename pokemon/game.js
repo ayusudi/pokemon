@@ -1,6 +1,5 @@
-const PokemonFactory = require('./factory')
-
 const fs = require('fs')
+const PokemonFactory = require('./factory')
 const Trainer = require('./trainer')
 
 class Game {
@@ -22,7 +21,6 @@ class Game {
             return false
         }
     }
-
     static memory(name, gender, pathPokemon, pathMove) {
         let data = fs.readFileSync(pathPokemon, 'utf-8').split('\n')
         let trainer = new Trainer(name, gender)

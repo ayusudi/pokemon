@@ -11,23 +11,20 @@ class Pokemon {
     set ownerName(name) {
         this._ownerName = name
     }
-    get hp (){
+    get hp() {
         return this._hp
     }
-
-    get moves(){
+    get moves() {
         return this._moves
     }
-
-    learnMove(moveName, dmg){
+    learnMove(moveName, dmg) {
         let instance = new Move(moveName, dmg)
         this._moves.push(instance)
         return this
     }
-
     train(moveName, point) {
         let move = this._moves.filter(el => el.name === moveName)[0]
-        if(move){
+        if (move) {
             let tenPersen = point / 10
             let update = move.damage + tenPersen
             move.damage = update
@@ -41,16 +38,15 @@ class Pokemon {
         this._hp = 100
         return this
     }
-    decreaseHp(damage){
+    decreaseHp(damage) {
         this._hp -= damage
         console.log(`Pokemon ${this.name}, Hp decrease to ${this._hp}.`)
         return this
     }
-    bestMove(){
-        let bestMoves =  this._moves.map(el => el).sort((a,b) => b.damage - a.damage)[0]
+    bestMove() {
+        let bestMoves = this._moves.map(el => el).sort((a, b) => b.damage - a.damage)[0]
         return bestMoves
     }
 }
-
 
 module.exports = Pokemon

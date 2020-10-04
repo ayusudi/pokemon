@@ -2,7 +2,6 @@ const fs = require('fs')
 const PokemonFactory = require('./factory')
 
 let data = fs.readFileSync('demo.txt', 'utf-8').split('\n')
-
 let array = []
 for (let i = 0; i < data.length; i++) {
     let splitter = data[i].split(', ')
