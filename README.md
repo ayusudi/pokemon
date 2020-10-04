@@ -103,7 +103,7 @@ We restored your Pokemon to full health!
 */
 ```
 
-gunakan console.table() untuk tampilkan table seperti diatas
+:warning: gunakan console.table() untuk tampilkan table seperti diatas
 
 - Pokemon decrease (mengurangi) hp sebanyak inputnya (number)
 
